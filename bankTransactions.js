@@ -1,4 +1,4 @@
-class BankStatement{
+class BankTransactions{
     constructor(){
         this.currentBalance = 0;
     }
@@ -21,4 +21,4 @@ class BankStatement{
     }
 }
 
-module.exports = BankStatement;
+module.exports = BankTransactions;
