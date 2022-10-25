@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1666692795764" clover="3.2.0">
+  <project timestamp="1666692795764" name="All files">
+    <metrics statements="20" coveredstatements="20" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="8" elements="30" coveredelements="30" complexity="0" loc="20" ncloc="20" packages="1" files="2" classes="2"/>
+    <file name="bankTransactions.js" path="/mnt/c/Users/james/MAKERS-PROJECTS/bank-test/bankTransactions.js">
+      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+      <line num="3" count="3" type="stmt"/>
+      <line num="7" count="2" type="stmt"/>
+      <line num="8" count="2" type="stmt"/>
+      <line num="12" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="20" count="2" type="stmt"/>
+      <line num="24" count="1" type="stmt"/>
+    </file>
+    <file name="displayStatement.js" path="/mnt/c/Users/james/MAKERS-PROJECTS/bank-test/displayStatement.js">
+      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <line num="3" count="3" type="stmt"/>
+      <line num="4" count="3" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="12" count="2" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="21" count="1" type="stmt"/>
+      <line num="25" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

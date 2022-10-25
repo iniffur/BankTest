@@ -13,4 +13,9 @@ describe('Bank Transactions', () => {
         expect(displayStatement.printStatement()).
             toBe('date || credit || debit || balance\n24/10/2022 || 1000 || || 1000')
     })
+
+    // it('Returns the current date', () => {
+    //     const displayStatement = new DisplayStatement()
+    //     expect(displayStatement.getDate()).toBe('25/10/2022')
+    // })
 })
