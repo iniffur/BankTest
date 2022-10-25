@@ -24,19 +24,7 @@ describe('Bank Transactions', () => {
     });
 
     it('Produces a correct date', () => {
-  
         const displayStatement = new DisplayStatement()
-
-        // getCurrentDate(){
-        //     const date = new Date();
-        //     let day = date.getDate();
-        //     let month = date.getMonth() + 1;
-        //     let year = date.getFullYear();
-        //     return `${day}/${month}/${year}`;
-        // }
-
-
-
 
         let mockDate = jest
             .spyOn(DisplayStatement.prototype, "getCurrentDate")
@@ -45,5 +33,4 @@ describe('Bank Transactions', () => {
         expect(displayStatement.getCurrentDate()).toBe(12)
         mockDate.mockRestore()
     })
-
 })
