@@ -29,6 +29,6 @@ The rest of the program can be interacted with in the node REPL - and example of
 
 I think the biggest current limitation would be the size of the 'addTransaction()' function in the 'DisplayStatement' method - given more time I would aim to refactor and cut this down.
 
-I have also struggled to perfect jest mocking for the a current date - leading to the current test coverage being below 100%
+I have also struggled to perfect jest mocking for the current date - leading to the current test coverage being below 100%
 
 ![Screenshot](./images/Screenshot_2022-10-25_185646.png)
