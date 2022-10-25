@@ -15,7 +15,7 @@ describe('Integration Test', () => {
             '25/10/2022 || 500 || || 500')
         
         mockDate.mockRestore();
-    })
+    });
 
     it('Allows a withdraw transaction if balance is greater than withdraw amount', () => {
         const bankTransaction = new BankTransaction()
@@ -30,9 +30,10 @@ describe('Integration Test', () => {
         displayStatement.addTransaction('Withdraw', 200)
         expect(displayStatement.printStatement()).
         toBe('date || credit || debit || balance' + 
-        '\n22/10/2022 || 500 || || 500' + 
-        '\n23/10/2022 || || 200 || 300')
+        '\n23/10/2022 || || 200 || 300' +
+        '\n22/10/2022 || 500 || || 500') 
 
         mockDate.mockRestore();
-    })
-})
+    });
+
+});

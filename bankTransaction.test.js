@@ -11,7 +11,7 @@ describe('Bank Transaction', () => {
         bankTransaction.deposit(1500);
         bankTransaction.withdraw(500);
         expect(bankTransaction.showBalance()).toBe(1000);
-    })
+    });
 
     it('Bank balance cannot be less than zero', () => {
         const bankTransaction = new BankTransaction();
@@ -19,5 +19,5 @@ describe('Bank Transaction', () => {
         expect(() => {
             bankTransaction.withdraw(1500)}).
             toThrow('Error: your bank balance cannot go below 0');
-    })
+    });
 });

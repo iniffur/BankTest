@@ -1,7 +1,6 @@
 class DisplayStatement{
     constructor(bankTransaction){
-        this.statementHeader = 'date || credit || debit || balance';
-        this.statement = [this.statementHeader];
+        this.statement = []
         this.bankTransaction = bankTransaction;
     }
 
@@ -10,11 +9,14 @@ class DisplayStatement{
         let day = date.getDate();
         let month = date.getMonth() + 1;
         let year = date.getFullYear();
-        let currentDate = `${day}/${month}/${year}`;
-        return currentDate;
+        return `${day}/${month}/${year}`;
     }
 
     addTransaction(transactionType, amount){
+        if (!Number.isInteger(amount) || amount < 0){
+            throw new Error('Error: Please enter a valid integer');
+        }
+
         let newTransaction
         if (transactionType === 'Deposit'){
             this.bankTransaction.deposit(amount)
@@ -23,18 +25,18 @@ class DisplayStatement{
             this.bankTransaction.withdraw(amount)
             newTransaction = `${this.getCurrentDate()} || || ${amount} || ${this.bankTransaction.showBalance()}`
         } else {
-            throw new Error('Error: Please enter either "Deposit" or "Withdraw" along with a valid number')
+            throw new Error('Error: Please enter either "Deposit" or "Withdraw" along with a valid number');
         }
 
-        if (!Number.isInteger(amount)){
-            throw new Error('Error: Please enter a valid integer')
-        }
-
-        this.statement.push(newTransaction);
+        this.statement.unshift(newTransaction);
     }
 
     printStatement(){
-        return this.statement.join('\n')
+        let statementHeader = 'date || credit || debit || balance';
+        this.statement.unshift(statementHeader);
+        let newStatement =  this.statement.join('\n')
+        this.statement.splice(0, 1)
+        return newStatement
     }
 }
 
