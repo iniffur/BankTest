@@ -21,7 +21,7 @@ npm test
 npm test -- --coverage
 ```
 
-The rest of the program can be interacted with in the node REPL - and example of which with the output being shown below:
+The rest of the program can be interacted with in the node REPL - an example of which with the output being shown below:
 
 ![Screenshot](./images/Screenshot_2022-10-25_184050.png)
 
