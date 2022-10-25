@@ -5,7 +5,6 @@ class BankTransaction{
 
     deposit(depositAmount){
         this.currentBalance += depositAmount;
-        return depositAmount;
     }
 
     withdraw(withdrawlAmount){
@@ -13,7 +12,6 @@ class BankTransaction{
             throw new Error('Error: your bank balance cannot go below 0');
         }
         this.currentBalance -= withdrawlAmount;
-        return withdrawlAmount;
     }
 
     showBalance(){
