@@ -10,8 +10,8 @@ class DisplayStatement{
         let day = date.getDate();
         let month = date.getMonth() + 1;
         let year = date.getFullYear();
-        this.currentDate = `${day}/${month}/${year}`;
-        return this.currentDate;
+        let currentDate = `${day}/${month}/${year}`;
+        return currentDate;
     }
 
     addTransaction(transactionType, amount){
@@ -22,7 +22,14 @@ class DisplayStatement{
         } else if (transactionType === 'Withdraw'){
             this.bankTransaction.withdraw(amount)
             newTransaction = `${this.getCurrentDate()} || || ${amount} || ${this.bankTransaction.showBalance()}`
-        } 
+        } else {
+            throw new Error('Error: Please enter either "Deposit" or "Withdraw" along with a valid number')
+        }
+
+        if (!Number.isInteger(amount)){
+            throw new Error('Error: Please enter a valid integer')
+        }
+
         this.statement.push(newTransaction);
     }
 

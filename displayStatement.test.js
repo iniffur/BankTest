@@ -7,15 +7,19 @@ describe('Bank Transactions', () => {
             toBe('date || credit || debit || balance')
     })
 
-    // it('Adds a transaction to the statement', () => {
-    //     const displayStatement = new DisplayStatement()
-    //     displayStatement.addTransaction('24/10/2022 || 1000 || || 1000')
-    //     expect(displayStatement.printStatement()).
-    //         toBe('date || credit || debit || balance\n24/10/2022 || 1000 || || 1000')
-    // })
+    it('Raises error if neither Deposit or Withdraw are given as an option', () => {
+        const displayStatement = new DisplayStatement()
+        expect(() => {
+            displayStatement.addTransaction('Failure', 10000).
+            toThrow('Error: Please enter either "Deposit" or "Withdraw" along with a valid number');
+        })
+    })
 
-    // it('Returns the current date', () => {
-    //     const displayStatement = new DisplayStatement()
-    //     expect(displayStatement.getDate()).toBe('25/10/2022')
-    // })
+    it('Raises an error if integer isnt given', () => {
+        const displayStatement = new DisplayStatement()
+        expect(() => {
+            displayStatement.addTransaction('Deposit', '10000').
+            toThrow('Error: Please enter a valid integer');
+        })
+    })
 })
