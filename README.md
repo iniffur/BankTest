@@ -23,7 +23,7 @@ npm test -- --coverage
 
 The rest of the program can be interacted with in the node REPL - and example of which with the output being shown below:
 
-![Screenshot](images/Screenshot_2022-10-25_184050.png)
+![Screenshot](./images/Screenshot_2022-10-25_184050.png)
 
 ## Current Limitations:
 
@@ -31,4 +31,4 @@ I think the biggest current limitation would be the size of the 'addTransaction(
 
 I have also struggled to perfect jest mocking for the a current date - leading to the current test coverage being below 100%
 
-![Screenshot](images/Screenshot_2022-10-25_185646.png)
+![Screenshot](./images/Screenshot_2022-10-25_185646.png)
